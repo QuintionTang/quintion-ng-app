@@ -1,0 +1,17 @@
+<h2>天气预报</h2>
+<div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+        <input type="text" value="{{this.cityid}}" class="form-control" placeholder="请输入城市ID..."><br>
+        <input type="text" value="{{this.city}}"  class="form-control" placeholder="请输入城市..."><br>
+        <button type="button" class="btn btn-primary" (click)="callWeatherService()">立即查询</button>
+        <br><br><br>
+        <br>
+        <p class="well lead">
+            <i>城市：</i> {{ this.op_city }} {{ this.op_country }} <br>
+            <i>天气：</i> {{ this.op_today }} <br>
+        </p>
+        <p class="text-info">天气服务请求次数：
+            <span class="badge">{{this._sharedService.totReqsMade}}</span>
+        </p>
+    </div>
+</div>
